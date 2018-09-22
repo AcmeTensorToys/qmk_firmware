@@ -1,0 +1,21 @@
+#ifndef CONFIG_NWF_H
+#define CONFIG_NWF_H
+
+#include QMK_KEYBOARD_CONFIG_H
+
+#undef TAPPING_TERM
+#define TAPPING_TERM 200
+
+#define PERMISSIVE_HOLD
+
+#undef TAPPING_TOGGLE
+#define TAPPING_TOGGLE 2
+
+#define VENDOR_ID 0xFEED
+# undef PRODUCT_ID
+#define PRODUCT_ID 0xA502
+#define SERIAL_NUMBER 1337
+
+#define MAGIC_EXPLICIT_UPDATES
+
+#endif
