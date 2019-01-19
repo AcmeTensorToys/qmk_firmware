@@ -636,6 +636,7 @@ $(shell echo '#define QMK_VERSION "$(GIT_VERSION)"' > $(ROOT_DIR)/quantum/versio
 $(shell echo '#define QMK_BUILDDATE "$(BUILD_DATE)"' >> $(ROOT_DIR)/quantum/version.h)
 $(shell echo '#define CHIBIOS_VERSION "$(CHIBIOS_VERSION)"' >> $(ROOT_DIR)/quantum/version.h)
 $(shell echo '#define CHIBIOS_CONTRIB_VERSION "$(CHIBIOS_CONTRIB_VERSION)"' >> $(ROOT_DIR)/quantum/version.h)
+$(shell echo 'static const char git_rev_bytes[] = { $(shell git rev-parse HEAD | sed -e "s/\(..\)/0x\1,/g") };' >> $(ROOT_DIR)/quantum/version.h)
 else
 BUILD_DATE := NA
 endif
