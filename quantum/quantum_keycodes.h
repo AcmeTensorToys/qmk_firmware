@@ -505,6 +505,11 @@ enum quantum_keycodes {
     MAGIC_EE_HANDS_LEFT,
     MAGIC_EE_HANDS_RIGHT,
 
+#ifdef MAGIC_EXPLICIT_UPDATES
+    MAGIC_UPDATE_EEPROM,
+    MAGIC_REVERT_EEPROM,
+#endif
+
     // Dynamic Macros
     DYN_REC_START1,
     DYN_REC_START2,
